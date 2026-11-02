@@ -4,8 +4,10 @@
 # SAFE     = almost nobody needs it on a TV; removing it won't break anything.
 # OPTIONAL = an app some people use. The script asks you about each one.
 #
-# Nothing is permanently deleted: apps are removed for the TV's user only
-# ("pm uninstall --user 0"), so restore.sh or a factory reset brings them back.
+# Nothing is uninstalled. Apps are only switched off ("pm disable-user"), so they
+# stop running and slowing the TV down, and "./tv-cleanup.sh restore" switches them back on.
+# Streaming apps (Netflix, Prime, Hotstar...) are deliberately not here: "clean" asks
+# about every preinstalled app with an icon, so you choose which of those to keep.
 #
 # Deliberately NOT listed (removing these breaks the TV): the home screen/launcher,
 # Google Play Services, Play Store, setup wizard, Google Assistant/voice search,
@@ -26,21 +28,6 @@ com.google.android.youtube.tvkids           | OPTIONAL | YouTube Kids
 com.google.android.backdrop                 | OPTIONAL | Ambient-mode photo screensaver
 com.google.android.apps.tv.dreamx           | OPTIONAL | Google TV ambient screensaver
 com.google.android.apps.mediashell          | OPTIONAL | Chromecast built-in (remove only if you never cast from your phone)
-com.google.android.apps.tv.launcherx.coldstart | OPTIONAL | Google TV first-run promos
-com.google.android.tvrecommendations        | OPTIONAL | Home-screen "recommended" rows (older Android TV)
-com.amazon.amazonvideo.livingroom           | OPTIONAL | Prime Video
-com.netflix.ninja                           | OPTIONAL | Netflix
-com.disney.disneyplus                       | OPTIONAL | Disney+
-com.spotify.tv.android                      | OPTIONAL | Spotify
-com.facebook.katana                         | OPTIONAL | Facebook
-com.zee5.tv                                 | OPTIONAL | ZEE5
-in.startv.hotstar                           | OPTIONAL | Hotstar (mobile build)
-in.startv.hotstartv                         | OPTIONAL | Hotstar (TV build)
-com.jio.media.jiobeats                      | OPTIONAL | JioSaavn
-com.sonyliv                                 | OPTIONAL | SonyLIV
-com.erosnow                                 | OPTIONAL | Eros Now
-com.hungama.movies.tv                       | OPTIONAL | Hungama
-com.mxtech.videoplayer.television           | OPTIONAL | MX Player
 com.tcl.tvweishi                            | OPTIONAL | TCL "TV Guard" system cleaner (TCL TVs)
 com.tcl.esticker                            | OPTIONAL | TCL e-sticker promo (TCL TVs)
 com.tcl.guard                               | OPTIONAL | TCL guard/cleaner (TCL TVs)
